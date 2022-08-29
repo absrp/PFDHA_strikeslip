@@ -29,7 +29,14 @@ Some of the scripts for running the models for each individual earthquake requir
 
 
 <!-- ROADMAP -->
-## Roadmap
+## Running the general end-user model
+
+- [ ] In the "General end-user model - Python" directory
+    - [ ] Run the "PFDHA_secondary_fracturing.ipynb" Jupiter Notebook. 
+    - [ ] Input your desired value for Do (in meters) when the dynamic prompt comes up
+    - [ ] The script exports two pdf files: the hazard curve and the uncertainty distribution for each parameter in the  model
+
+## Running the complete analysis in Rodriguez Padilla and Oskin (202N)
 
 - [ ] Add Changelog
 - [ ] Add back to top links
