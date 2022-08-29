@@ -32,7 +32,7 @@ Some of the scripts for running the models for each individual earthquake requir
 ## Creating hazard curves
 ### Running the general end-user model
 
-- [ ] In the "General end-user model - Python" directory:
+- [ ] In the "General end-user model - Python" directory
     - [ ] Run the "PFDHA_secondary_fracturing.ipynb" Jupiter Notebook
     - [ ] Input your desired value for Do (in meters) when the dynamic prompt comes up
     - [ ] The script exports two pdf files: the hazard curve and the uncertainty distribution for each parameter in the  model
@@ -41,7 +41,7 @@ Some of the scripts for running the models for each individual earthquake requir
 The equation numbers correspond to those in the manuscript. 
 
 - [ ] In the "All scripts analysis (Matlab + Python)" directory:
-    - [ ] To generate the fracture density decays (second term of eq.10):
+    - [ ] To generate the fracture density decays (second term of eq.10)
     	- [ ] Run the "fracture_density_decay.m" script
     	- [ ] The script exports a text file with the fracture density at each x position with distance away from the fault
     	- [ ] Run the "MCMC_density_decay_Poisson.ipynb" script
@@ -51,7 +51,7 @@ The equation numbers correspond to those in the manuscript.
     - [ ] To estimate P(D>Do) for the EMC, Landers, Hector Mine, and Ridgecrest data: 
     	- [ ] Run the "generate_hazard_curve.m" script
     	- [ ] This script outputs figures 2 and 4 in the manuscript
-    - [ ] To generate uncertainties for the hazard curve for each event: 
+    - [ ] To generate uncertainties for the hazard curve for each event
 	- [ ] Run the "generate_hazard_curve.m" 
 	- [ ] This script outputs figures A2-A5 in the appendix
 
