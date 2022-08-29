@@ -1,270 +1,259 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+# Git Large File Storage
 
+[![CI status][ci_badge]][ci_url]
 
+[ci_badge]: https://github.com/git-lfs/git-lfs/workflows/CI/badge.svg
+[ci_url]: https://github.com/git-lfs/git-lfs/actions?query=workflow%3ACI
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[Git LFS](https://git-lfs.github.com) is a command line extension and
+[specification](docs/spec.md) for managing large files with Git.
 
+The client is written in Go, with pre-compiled binaries available for Mac,
+Windows, Linux, and FreeBSD. Check out the [website](http://git-lfs.github.com)
+for an overview of features.
 
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Best-README-Template</h3>
-
-  <p align="center">
-    An awesome README template to jumpstart your projects!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</div>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+### Downloading
 
-### Prerequisites
+You can install the Git LFS client in several different ways, depending on your
+setup and preferences.
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+* **Linux users**. Debian and RPM packages are available from
+  [PackageCloud](https://packagecloud.io/github/git-lfs/install).
+* **macOS users**. [Homebrew](https://brew.sh) bottles are distributed, and can
+  be installed via `brew install git-lfs`.
+* **Windows users**. Git LFS is included in the distribution of
+  [Git for Windows](https://gitforwindows.org/). Alternatively, you can
+  install a recent version of Git LFS from the [Chocolatey](https://chocolatey.org/) package manager.
+* **Binary packages**. In addition, [binary packages](https://github.com/git-lfs/git-lfs/releases) are
+available for Linux, macOS, Windows, and FreeBSD.
+* **Building from source**. [This repository](https://github.com/git-lfs/git-lfs.git) can also be
+built from source using the latest version of [Go](https://golang.org), and the
+available instructions in our
+[Wiki](https://github.com/git-lfs/git-lfs/wiki/Installation#source).
 
-### Installation
+Note that Debian and RPM packages are built for all OSes for amd64 and i386.
+For arm64, only Debian packages for the latest Debian release are built due to the cost of building in emulation.
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+### Installing
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+#### From binary
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The [binary packages](https://github.com/git-lfs/git-lfs/releases) include a script which will:
 
+- Install Git LFS binaries onto the system `$PATH`
+- Run `git lfs install` to
+perform required global configuration changes.
 
+```ShellSession
+$ ./install.sh
+```
 
-<!-- USAGE EXAMPLES -->
-## Usage
+#### From source
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+- Ensure you have the latest version of Go, GNU make, and a standard Unix-compatible build environment installed.
+- On Windows, install `goversioninfo` with `go install github.com/josephspurrier/goversioninfo/cmd/goversioninfo@latest`.
+- Run `make`.
+- Place the `git-lfs` binary, which can be found in `bin`, on your system’s executable `$PATH` or equivalent.
+- Git LFS requires global configuration changes once per-machine. This can be done by
+running:
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```ShellSession
+$ git lfs install
+```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### Verifying releases
 
+Releases are signed with the OpenPGP key of one of the core team members.  To
+get these keys, you can run the following command, which will print them to
+standard output:
 
+```ShellSession
+$ curl -L https://api.github.com/repos/git-lfs/git-lfs/tarball/core-gpg-keys | tar -Ozxf -
+```
 
-<!-- ROADMAP -->
-## Roadmap
+Once you have the keys, you can download the `sha256sums.asc` file and verify
+the file you want like so:
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+```ShellSession
+$ gpg -d sha256sums.asc | grep git-lfs-linux-amd64-v2.10.0.tar.gz | shasum -a 256 -c
+```
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+For the convenience of distributors, we also provide a wider variety of signed
+hashes in the `hashes.asc` file.  Those hashes are in the tagged BSD format, but
+can be verified with Perl's `shasum` or the GNU hash utilities, just like the
+ones in `sha256sums.asc`.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Example Usage
 
+To begin using Git LFS within a Git repository that is not already configured
+for Git LFS, you can indicate which files you would like Git LFS to manage.
+This can be done by running the following _from within a Git repository_:
 
+```bash
+$ git lfs track "*.psd"
+```
 
-<!-- CONTRIBUTING -->
+(Where `*.psd` is the pattern of filenames that you wish to track. You can read
+more about this pattern syntax
+[here](https://git-scm.com/docs/gitattributes)).
+
+> *Note:* the quotation marks surrounding the pattern are important to
+> prevent the glob pattern from being expanded by the shell.
+
+After any invocation of `git-lfs-track(1)` or `git-lfs-untrack(1)`, you _must
+commit changes to your `.gitattributes` file_. This can be done by running:
+
+```bash
+$ git add .gitattributes
+$ git commit -m "track *.psd files using Git LFS"
+```
+
+You can now interact with your Git repository as usual, and Git LFS will take
+care of managing your large files. For example, changing a file named `my.psd`
+(tracked above via `*.psd`):
+
+```bash
+$ git add my.psd
+$ git commit -m "add psd"
+```
+
+> _Tip:_ if you have large files already in your repository's history, `git lfs
+> track` will _not_ track them retroactively. To migrate existing large files
+> in your history to use Git LFS, use `git lfs migrate`. For example:
+>
+> ```
+> $ git lfs migrate import --include="*.psd" --everything
+> ```
+>
+> **Note that this will rewrite history and change all of the Git object IDs in your
+> repository, just like the export version of this command.**
+>
+> For more information, read [`git-lfs-migrate(1)`](https://github.com/git-lfs/git-lfs/blob/main/docs/man/git-lfs-migrate.1.ronn).
+
+You can confirm that Git LFS is managing your PSD file:
+
+```bash
+$ git lfs ls-files
+3c2f7aedfb * my.psd
+```
+
+Once you've made your commits, push your files to the Git remote:
+
+```bash
+$ git push origin main
+Uploading LFS objects: 100% (1/1), 810 B, 1.2 KB/s
+# ...
+To https://github.com/git-lfs/git-lfs-test
+   67fcf6a..47b2002  main -> main
+```
+
+Note: Git LFS requires at least Git 1.8.2 on Linux or 1.8.5 on macOS.
+
+### Uninstalling
+
+If you've decided that Git LFS isn't right for you, you can convert your
+repository back to a plain Git repository with `git lfs migrate` as well.  For
+example:
+
+```ShellSession
+$ git lfs migrate export --include="*.psd" --everything
+```
+
+**Note that this will rewrite history and change all of the Git object IDs in your
+repository, just like the import version of this command.**
+
+If there's some reason that things aren't working out for you, please let us
+know in an issue, and we'll definitely try to help or get it fixed.
+
+## Limitations
+
+Git LFS maintains a list of currently known limitations, which you can find and
+edit [here](https://github.com/git-lfs/git-lfs/wiki/Limitations).
+
+Git LFS source code utilizes Go modules in its build system, and therefore this
+project contains a `go.mod` file with a defined Go module path.  However, we
+do not maintain a stable Go language API or ABI, as Git LFS is intended to be
+used solely as a compiled binary utility.  Please do not import the `git-lfs`
+module into other Go code and do not rely on it as a source code dependency.
+
+## Need Help?
+
+You can get help on specific commands directly:
+
+```bash
+$ git lfs help <subcommand>
+```
+
+The [official documentation](docs) has command references and specifications for
+the tool.  There's also a [FAQ](https://github.com/git-lfs/git-lfs/wiki/FAQ) on
+the wiki which answers some common questions.
+
+If you have a question on how to use Git LFS, aren't sure about something, or
+are looking for input from others on tips about best practices or use cases,
+feel free to
+[start a discussion](https://github.com/git-lfs/git-lfs/discussions).
+
+You can always [open an issue](https://github.com/git-lfs/git-lfs/issues), and
+one of the Core Team members will respond to you. Please be sure to include:
+
+1. The output of `git lfs env`, which displays helpful information about your
+   Git repository useful in debugging.
+2. Any failed commands re-run with `GIT_TRACE=1` in the environment, which
+   displays additional information pertaining to why a command crashed.
+
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for info on working on Git LFS and
+sending patches. Related projects are listed on the [Implementations wiki
+page](https://github.com/git-lfs/git-lfs/wiki/Implementations).
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+See also [SECURITY.md](SECURITY.md) for info on how to submit reports
+of security vulnerabilities.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+## Core Team
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+These are the humans that form the Git LFS core team, which runs the project.
 
+In alphabetical order:
 
+| [@bk2204][bk2204-user] | [@chrisd8088][chrisd8088-user] | [@larsxschneider][larsxschneider-user] |
+| :---: | :---: | :---: |
+| [![][bk2204-img]][bk2204-user] | [![][chrisd8088-img]][chrisd8088-user] | [![][larsxschneider-img]][larsxschneider-user] |
+| [PGP 0223B187][bk2204-pgp] | [PGP 088335A9][chrisd8088-pgp] | [PGP A5795889][larsxschneider-pgp] |
 
-<!-- LICENSE -->
-## License
+[bk2204-img]: https://avatars1.githubusercontent.com/u/497054?s=100&v=4
+[chrisd8088-img]: https://avatars1.githubusercontent.com/u/28857117?s=100&v=4
+[larsxschneider-img]: https://avatars1.githubusercontent.com/u/477434?s=100&v=4
+[bk2204-user]: https://github.com/bk2204
+[chrisd8088-user]: https://github.com/chrisd8088
+[larsxschneider-user]: https://github.com/larsxschneider
+[bk2204-pgp]: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x88ace9b29196305ba9947552f1ba225c0223b187
+[chrisd8088-pgp]: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x86cd3297749375bcf8206715f54fe648088335a9
+[larsxschneider-pgp]: https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xaa3b3450295830d2de6db90caba67be5a5795889
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+### Alumni
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+These are the humans that have in the past formed the Git LFS core team, or
+have otherwise contributed a significant amount to the project. Git LFS would
+not be possible without them.
 
+In alphabetical order:
 
+| [@andyneff][andyneff-user] | [@PastelMobileSuit][PastelMobileSuit-user] | [@rubyist][rubyist-user] | [@sinbad][sinbad-user] | [@technoweenie][technoweenie-user] | [@ttaylorr][ttaylorr-user] |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| [![][andyneff-img]][andyneff-user] | [![][PastelMobileSuit-img]][PastelMobileSuit-user] | [![][rubyist-img]][rubyist-user] | [![][sinbad-img]][sinbad-user] | [![][technoweenie-img]][technoweenie-user] | [![][ttaylorr-img]][ttaylorr-user] |
 
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[andyneff-img]: https://avatars1.githubusercontent.com/u/7596961?v=3&s=100
+[PastelMobileSuit-img]: https://avatars2.githubusercontent.com/u/37254014?s=100&v=4
+[rubyist-img]: https://avatars1.githubusercontent.com/u/143?v=3&s=100
+[sinbad-img]: https://avatars1.githubusercontent.com/u/142735?v=3&s=100
+[technoweenie-img]: https://avatars3.githubusercontent.com/u/21?v=3&s=100
+[ttaylorr-img]: https://avatars2.githubusercontent.com/u/443245?s=100&v=4
+[andyneff-user]: https://github.com/andyneff
+[PastelMobileSuit-user]: https://github.com/PastelMobileSuit
+[sinbad-user]: https://github.com/sinbad
+[rubyist-user]: https://github.com/rubyist
+[technoweenie-user]: https://github.com/technoweenie
+[ttaylorr-user]: https://github.com/ttaylorr
