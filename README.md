@@ -29,6 +29,7 @@ Some of the scripts for running the models for each individual earthquake requir
 
 
 <!-- ROADMAP -->
+## Creating hazard curves
 ### Running the general end-user model
 
 - [ ] In the "General end-user model - Python" directory:
