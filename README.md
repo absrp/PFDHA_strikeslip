@@ -60,11 +60,13 @@ The equation numbers correspond to those in the manuscript.
 
 Please report suggestions and issues:
 
-Your Name - [@_absrp](https://twitter.com/_absrp) - arodriguezpadilla@ucdavis.edu
+[@_absrp](https://twitter.com/_absrp) - arodriguezpadilla@ucdavis.edu
 
 Project Link: [https://github.com/absrp/PFDHA_strikeslip](https://github.com/absrp/PFDHA_strikeslip)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+Manuscript Link: * in review, stay tuned *
 
 
 
