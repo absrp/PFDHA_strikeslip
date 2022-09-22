@@ -20,7 +20,7 @@
 
 %% load simplified main rupture trace
 
-main_rupture = shaperead('mainrupture_mainshock.shp'); % load main trace shapefile 
+main_rupture = shaperead('.shp'); % load main trace shapefile 
 pt_x_main = [];
 pt_y_main = [];
 
@@ -33,7 +33,7 @@ end
 
 %% load high-resolution fracture map
 
-lines_secondary = shaperead('mainshock_fractures_Ridgecrest.shp'); % load fracture shapefile
+lines_secondary = shaperead('.shp'); % load fracture shapefile
 
 D = [];
 
@@ -52,17 +52,6 @@ for n=1:numel(lines_secondary)
     D = [D; Di];
     disp(n) % keeps track of iteration #
 end 
-
-% locations = CFMRidgecrestdistancesHauksson(:,29:44);
-% depthi = CFMRidgecrestdistancesHauksson(:,10);
-% depth_idx = find(depthi<=5); 
-% error_loc = CFMRidgecrestdistancesHauksson(:,23);
-% min_loc = min(locations');
-% min_loc = min_loc(depth_idx);
-% error_loc = error_loc(depth_idx);
-% idx = find(abs(error_loc)<0.1);
-% min_loc = min_loc(idx);
-% distance_EQ = min_loc;
 
 %% generate and plot fault-perpendicular decay
 
@@ -88,12 +77,9 @@ normalized_fr = (hist_fr./diff(edges))/normalize_main; % normalize each density 
 normalized_fr(isnan(normalized_fr)) = 0; 
 normalized_fr(isinf(normalized_fr)) = 0;
 
-% normalization factors for sediment and bedrock Ridgecrest (0.7044 and
-% 0.2956 respectively) from portion of rupture in material
-
 % plot histogram of fracture density with fault-perpendicular distance
 figure
-h_fr = histogram('Binedges',edges,'BinCounts',normalized_fr,'FaceColor',[0.8000    0.8000    0.8000],'FaceAlpha',0.8)
+h_fr = histogram('Binedges',edges,'BinCounts',normalized_fr,'FaceColor',[0.8000    0.8000    0.8000],'FaceAlpha',0.8);
 set(gca,'YScale','log','XScale','log')
 ylabel('Frequency')
 xlabel('Distance away from fault (m)')
@@ -124,7 +110,7 @@ yvals = h_fr.Values;
 results = [xvals_fr' yvals'];
 results = results(all(results,2),:); % removes empty rows
 
-%writematrix(results, '.txt') 
+writematrix(results, '.txt') 
 
 
 %% function dumpster
