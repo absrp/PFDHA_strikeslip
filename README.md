@@ -17,7 +17,7 @@ Widespread distributed fracturing during earthquakes threatens infrastructure an
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This repository contains the scripts and data required to create the general model published in Rodriguez Padilla and Oskin 202N. This information is stored in the main directory. 
+This repository contains the scripts and data required to create the general model published in Rodriguez Padilla and Oskin 202N. The general model runs in script PFDHA_secondary_ruptures.ipynb (see instructions for use below). 
 
 Additionally, all of the scripts to develop this model based on analysis of data from the Landers, Hector Mine, El Mayor Cucapah, and Ridgecrest (foreshock and mainshock) earthquakes is available in the PFHDA_model_allcode directory. The data for running this analysis are stored in a separate repository that is also open-access (https://figshare.com/projects/A_probabilistic_displacement_hazard_assessment_framework_for_distributed_ruptures_from_strike-slip_earthquakes/162349). All figures in the manuscript can be generated using these scripts and data. 
 
