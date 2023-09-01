@@ -10,7 +10,8 @@
 % this script requires five shapefiles from the FDHI rupture database
 % appendix (https://www.risksciences.ucla.edu/girs-reports/2021/08) and the
 % main rupture shapefiles from the appendix of Rodriguez Padilla and Oskin
-% (202X)
+% (202X). We also use the file 'data_FDHI.xlsx', which contains the
+% data from the database, including displacement. 
 
 %% generate displacement distribution
 close all; clear;
@@ -38,7 +39,7 @@ for i=1:length(events)
     type = subset_data.fps_meas_type;
     field = find(strcmp(type,'field'));
     subset_data = subset_data(field,:);
-    slip = subset_data.fps_central_meters; %recommended_net_preferred_for_analysis_meters;
+    slip = subset_data.recommended_net_preferred_for_analysis_meters;
     slipidx = find(slip>0); 
     slip = slip(slipidx);
     coordsx = subset_data.longitude_degrees(slipidx,:);
@@ -56,27 +57,39 @@ for i=1:length(events)
     distance = zeros(length(coords_ref),length(main_rupture)); 
  
 
-%     if i == 5
-%         p == 4;
-%     else 
-%         p = i;
-%     end
-%     
-%     subplot(2,2,p)
-%     scatter(coordsx,coordsy,20,'MarkerFaceColor',c,'MarkerFaceAlpha',0.2,'MarkerEdgeColor','none') 
-%     hold on
-%     for n=1:length(main_rupture)
-%         plot(main_rupture(n).X,main_rupture(n).Y,'k','linewidth',1.5)
-%         hold on
-%         set(gca,'FontSize',14)
-%     end
-%     axis equal
-%     box on
-%     xlabel('Lon')
-%     ylabel('Lat')
-%     
-%    namestrfig = ('displacement_map_ref.pdf');
-%    saveas(gcf,namestrfig);
+    if i == 5
+        p == 4;
+    else 
+        p = i;
+    end
+   % 
+   %  subplot(2,2,p)
+   %  scatter(coordsx,coordsy,20,'MarkerFaceColor',c,'MarkerFaceAlpha',0.2,'MarkerEdgeColor','none') 
+   %  hold on
+   %  for n=1:length(main_rupture)
+   %      plot(main_rupture(n).X,main_rupture(n).Y,'k','linewidth',1.5)
+   %      hold on
+   %      %set(gca,'FontSize',14)
+   %  end
+   %  axis equal
+   %  % box on
+   %  xlabel('Lon')
+   %  ylabel('Lat')
+   % 
+   %  if p == 1
+   %      text(-116.95, 34.68, 'Landers', 'VerticalAlignment', 'top')
+   %  elseif p == 2
+   %     text(-115.5, 32.715, 'El Mayor-Cucapah', 'VerticalAlignment', 'top')
+   %  elseif p == 3
+   %     text(-116.2, 34.76, 'Hector Mine', 'VerticalAlignment', 'top')
+   %  elseif p == 4
+   %     text(-117.59, 35.8, 'Mainshock', 'VerticalAlignment', 'top','Color', [0.4941    0.1843    0.5569])
+   %     text(-117.7, 35.659, 'Foreshock', 'VerticalAlignment', 'top','Color', [0.8706    0.4902         0])
+   %     text(-117.46, 35.92, 'Ridgecrest', 'VerticalAlignment', 'top')
+   %  end
+   % 
+   % namestrfig = ('displacement_map_ref.pdf');
+   % saveas(gcf,namestrfig);
 
     for n=1:length(main_rupture)
         [curvexyx, curvexyy] = wgs2utm(main_rupture(n).Y,main_rupture(n).X,11,'N');
@@ -85,7 +98,6 @@ for i=1:length(events)
         [xy,distance(:,n),t_a] = distance2curve(curvexy,coords_ref,'linear');
     end
     
-
     
     dist = min(distance,[],2); 
     
@@ -140,7 +152,7 @@ for i=1:length(events)
         subplot(3,2,5.5)  
     else
         end
-        
+
     scatter(xval,meanslip,'Filled')
     hold on
     scatter(xval,stdslip,'filled','MarkerFaceAlpha',0.3)
@@ -181,7 +193,7 @@ for i=1:length(events)
     
 end 
 
-%saveas(gcf,'dispmap.pdf');
+saveas(gcf,'dispmap.pdf');
 
 
 function event_info = event_info(event) 
