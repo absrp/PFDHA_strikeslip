@@ -121,8 +121,8 @@ x_1 = fault_x(1:end-1);
 x_2 = fault_x(2:end);
 y_1 = fault_y(1:end-1);
 y_2 = fault_y(2:end);
-euclidean_matrix = sqrt((x_1-x_2).^2+(y_1-y_2).^2); % note transformation to local coordinate system 
-L = sum(euclidean_matrix);
+segment_length = sqrt((x_1-x_2).^2+(y_1-y_2).^2); % note transformation to local coordinate system 
+L = sum(segment_length);
 end 
 function [pt_x,pt_y] = subdivide_points(fault_x,fault_y)
 if length(fault_x)>0 % if statement to deal with empty lines in shapefile
