@@ -48,7 +48,7 @@ Project Link: [https://github.com/absrp/PFDHA_strikeslip](https://github.com/abs
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Manuscript Link: * in review, stay tuned *
+Manuscript Link: https://pubs.geoscienceworld.org/ssa/bssa/article-pdf/doi/10.1785/0120230044/5958348/bssa-2023044.1.pdf
 
 
 
