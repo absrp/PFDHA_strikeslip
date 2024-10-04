@@ -13,7 +13,7 @@
 ## About The Project
 This is a probabilistic displacement hazard framework for immature strike-slip faults. I maintain this project for minor bug fixes and additional model application development. The version of this framework applied in Rodriguez Padilla and Oskin (2023, BSSA) is stored in Zenodo repository [https://zenodo.org/records/13892098](https://zenodo.org/records/1389209), created Oct 4, 2024 for version control before additional development. 
 
-## Manuscript abstrac
+## Manuscript abstract
 Widespread distributed fracturing during earthquakes threatens infrastructure and lifelines. We combine high-resolution rupture maps from the five major surface-rupturing strike-slip earthquakes in southern California and northern Mexico since 1992 to incorporate the displacements produced by secondary ruptures into a probabilistic displacement hazard analysis framework. Through analysis of the spatial distribution of mapped ruptures and displacements for each of these events, we develop a magnitude-dependent expression for the probability of finding a secondary rupture that accommodates a displacement that exceeds a displacement threshold at a given distance away from the principal fault. Our model is best applied to estimating expected secondary displacements for strike-slip earthquakes, similar to those analyzed, with widespread ruptures across immature fault zones. 
 
 <!-- GETTING STARTED -->
