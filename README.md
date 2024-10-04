@@ -11,13 +11,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+This is a probabilistic displacement hazard framework for immature strike-slip faults. I maintain this project for minor bug fixes and additional model application development. The version of this framework applied in Rodriguez Padilla and Oskin (2023, BSSA) is stored in Zenodo repository [https://zenodo.org/records/13892098](https://zenodo.org/records/1389209). 
 
+## Manuscript abstrac
 Widespread distributed fracturing during earthquakes threatens infrastructure and lifelines. We combine high-resolution rupture maps from the five major surface-rupturing strike-slip earthquakes in southern California and northern Mexico since 1992 to incorporate the displacements produced by secondary ruptures into a probabilistic displacement hazard analysis framework. Through analysis of the spatial distribution of mapped ruptures and displacements for each of these events, we develop a magnitude-dependent expression for the probability of finding a secondary rupture that accommodates a displacement that exceeds a displacement threshold at a given distance away from the principal fault. Our model is best applied to estimating expected secondary displacements for strike-slip earthquakes, similar to those analyzed, with widespread ruptures across immature fault zones. 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This repository contains the scripts and data required to create the general model published in Rodriguez Padilla and Oskin 202N. The general model runs in script PFDHA_secondary_ruptures.ipynb (see instructions for use below). 
+This repository contains the scripts and data required to create the general model published in Rodriguez Padilla and Oskin 2023. The general model runs in script PFDHA_secondary_ruptures.ipynb (see instructions for use below). 
 
 Additionally, all of the scripts to develop this model based on analysis of data from the Landers, Hector Mine, El Mayor Cucapah, and Ridgecrest (foreshock and mainshock) earthquakes is available in the PFHDA_model_allcode directory. The data for running this analysis are stored in a separate repository that is also open-access (https://figshare.com/projects/A_probabilistic_displacement_hazard_assessment_framework_for_distributed_ruptures_from_strike-slip_earthquakes/162349). All figures in the manuscript can be generated using these scripts and data. 
 
@@ -42,7 +44,7 @@ Some of the scripts for running the models for each individual earthquake requir
 
 Please report suggestions and issues:
 
-[@_absrp](https://twitter.com/_absrp) - arodriguezpadilla@ucdavis.edu
+Email - amrodriguezpadilla@gmail.com
 
 Project Link: [https://github.com/absrp/PFDHA_strikeslip](https://github.com/absrp/PFDHA_strikeslip)
 
